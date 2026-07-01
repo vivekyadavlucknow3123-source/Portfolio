@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vivek Yadav | Full Stack Developer</title>
+  <meta name="title" content="Vivek Yadav | Full Stack Developer" />
+  <meta name="description" content="Portfolio of Vivek Yadav, a Full Stack Developer from Lucknow specializing in building scalable, efficient and beautiful web & mobile applications with React, Node.js and modern technologies." />
+  <meta name="keywords" content="Vivek Yadav, Full Stack Developer, Web Developer Lucknow, React Developer, Node.js Developer, Portfolio" />
+  <meta name="author" content="Vivek Yadav" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://vivekyadav.dev/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vivekyadav.dev/" />
+  <meta property="og:title" content="Vivek Yadav | Full Stack Developer" />
+  <meta property="og:description" content="I build scalable, efficient, and beautiful web & mobile applications. Passionate about solving real-world problems with clean code." />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://vivekyadav.dev/" />
+  <meta property="twitter:title" content="Vivek Yadav | Full Stack Developer" />
+  <meta property="twitter:description" content="I build scalable, efficient, and beautiful web & mobile applications. Passionate about solving real-world problems with clean code." />
+  <meta property="twitter:image" content="assets/images/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-180.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/skills.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/certificate.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/animation.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-logo">VY</span>
+      <div class="loader-bar"><span class="loader-bar-fill"></span></div>
+      <span class="loader-percent">0%</span>
+    </div>
+  </div>
+
+  <!-- ===================== CUSTOM CURSOR ===================== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===================== PARTICLES BACKGROUND ===================== -->
+  <div id="particles-js"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#home" class="nav-logo" data-cursor="hover">VY<span class="nav-logo-dot">.</span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active-link" data-section="home">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#certificates" class="nav-link" data-section="certificates">Certificates</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        <span class="nav-underline" id="navUnderline"></span>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="assets/resume/Vivek_Yadav_Resume.pdf" class="btn btn-outline btn-sm" download data-cursor="hover">
+          <i class="fa-solid fa-download"></i> Resume
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MOBILE MENU ===================== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" class="mobile-link" data-section="home">Home</a>
+    <a href="#about" class="mobile-link" data-section="about">About</a>
+    <a href="#skills" class="mobile-link" data-section="skills">Skills</a>
+    <a href="#projects" class="mobile-link" data-section="projects">Projects</a>
+    <a href="#certificates" class="mobile-link" data-section="certificates">Certificates</a>
+    <a href="#contact" class="mobile-link" data-section="contact">Contact</a>
+    <div class="mobile-socials">
+      <a href="https://github.com/vivekyadavlucknow3123-source" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/vivek-yadav99/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="mailto:vivekyadavrg@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section id="home" class="hero">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+
+      <div class="hero-socials">
+        <a href="https://github.com/vivekyadavlucknow3123-source" target="_blank" rel="noopener" data-cursor="hover" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/vivek-yadav99/" target="_blank" rel="noopener" data-cursor="hover" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener" data-cursor="hover" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:vivekyadavrg@gmail.com" data-cursor="hover" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <span class="hero-socials-line"></span>
+      </div>
+
+      <div class="hero-container">
+        <div class="hero-text">
+          <p class="hero-hello reveal-text"><span>Hi, I'm</span></p>
+          <h1 class="hero-name">
+            <span class="reveal-text"><span>Vivek</span></span>
+            <span class="reveal-text"><span class="text-gradient">Yadav</span></span>
+          </h1>
+          <h2 class="hero-role">
+            <span id="typed-role"></span><span class="typed-cursor">|</span>
+          </h2>
+          <p class="hero-desc reveal-fade">
+            I build scalable, efficient, and beautiful web &amp; mobile applications.
+            Passionate about solving real-world problems with clean code.
+          </p>
+
+          <div class="hero-buttons reveal-fade">
+            <a href="#projects" class="btn btn-primary magnetic" data-cursor="hover">
+              View Projects <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="assets/resume/Vivek_Yadav_Resume.pdf" class="btn btn-ghost magnetic" download data-cursor="hover">
+              Download Resume <i class="fa-solid fa-download"></i>
+            </a>
+            <a href="#contact" class="btn btn-ghost magnetic" data-cursor="hover">
+              Hire Me <i class="fa-solid fa-handshake"></i>
+            </a>
+          </div>
+
+          <div class="hero-stats reveal-fade">
+            <div class="hero-stat">
+              <i class="fa-solid fa-briefcase"></i>
+              <div><span class="counter" data-target="10">0</span><span class="stat-plus">+</span><p>Projects</p></div>
+            </div>
+            <div class="hero-stat">
+              <i class="fa-solid fa-layer-group"></i>
+              <div><span class="counter" data-target="15">0</span><span class="stat-plus">+</span><p>Technologies</p></div>
+            </div>
+            <div class="hero-stat">
+              <i class="fa-solid fa-calendar-days"></i>
+              <div><span class="counter" data-target="3">0</span><span class="stat-plus">+</span><p>Years Learning</p></div>
+            </div>
+            <div class="hero-stat">
+              <i class="fa-brands fa-github"></i>
+              <div><span class="counter" data-target="250">0</span><span class="stat-plus">+</span><p>GitHub Commits</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <div class="hero-orbit-ring"></div>
+          <div class="hero-orbit-ring hero-orbit-ring-2"></div>
+          <div class="hero-image-glow"></div>
+          <div class="hero-image-float">
+            <img src="assets/images/hero-photo.jpg" alt="Vivek Yadav, Full Stack Developer" class="hero-image" />
+          </div>
+          <span class="floating-badge floating-badge-1"><i class="fa-brands fa-react"></i> React</span>
+          <span class="floating-badge floating-badge-2"><i class="fa-brands fa-node-js"></i> Node.js</span>
+          <span class="floating-badge floating-badge-3"><i class="fa-solid fa-database"></i> MySQL</span>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" data-cursor="hover">
+        <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+        <span>Scroll Down</span>
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="about">
+      <div class="section-head" data-aos="fade-up">
+        <p class="eyebrow"><span class="eyebrow-line"></span> About Me</p>
+        <h2 class="section-title">Who <span class="text-gradient">I Am</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-col" data-aos="fade-right">
+          <div class="about-image-frame">
+            <img src="assets/images/about-photo.jpg" alt="Vivek Yadav portrait" class="about-image" />
+            <div class="about-image-border"></div>
+          </div>
+          <div class="about-exp-card">
+            <span class="about-exp-number">3+</span>
+            <span class="about-exp-label">Years of<br />Continuous Learning</span>
+          </div>
+        </div>
+
+        <div class="about-content-col" data-aos="fade-left">
+          <p class="about-tagline">Full Stack Developer, Problem Solver &amp; Technology Enthusiast</p>
+          <p class="about-text">
+            I'm Vivek Yadav, a full stack developer based in Lucknow who enjoys turning
+            ambiguous ideas into applications people actually want to use. My journey started
+            with curiosity about how websites work, and it hasn't slowed down since — I'm a
+            fast learner who picks up new frameworks and tools quickly, and a genuine
+            technology enthusiast who reads changelogs for fun.
+          </p>
+          <p class="about-text">
+            What drives me is problem solving: breaking a messy requirement down into a clean
+            architecture, then shipping it with code that's easy to read and easy to maintain.
+            I care about the details — performance, accessibility, and the small interactions
+            that make a product feel polished — as much as I care about the big picture.
+          </p>
+          <p class="about-text">
+            Whether it's a finance tracker crunching real numbers or a platform connecting
+            workers with employers, I approach every project as a curious, passionate developer
+            who's always looking for the next thing to learn.
+          </p>
+
+          <div class="about-counters">
+            <div class="about-counter-item">
+              <span class="counter" data-target="10">0</span><span class="stat-plus">+</span>
+              <p>Projects</p>
+            </div>
+            <div class="about-counter-item">
+              <span class="counter" data-target="15">0</span><span class="stat-plus">+</span>
+              <p>Skills</p>
+            </div>
+            <div class="about-counter-item">
+              <span class="counter" data-target="20">0</span><span class="stat-plus">+</span>
+              <p>Learning Hours / wk</p>
+            </div>
+            <div class="about-counter-item">
+              <span class="counter" data-target="3">0</span><span class="stat-plus">+</span>
+              <p>Years Experience</p>
+            </div>
+          </div>
+
+          <div class="about-actions">
+            <a href="assets/resume/Vivek_Yadav_Resume.pdf" class="btn btn-primary magnetic" download data-cursor="hover">
+              Download CV <i class="fa-solid fa-download"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline magnetic" data-cursor="hover">
+              Let's Talk <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="skills">
+      <div class="section-head" data-aos="fade-up">
+        <p class="eyebrow"><span class="eyebrow-line"></span> My Arsenal</p>
+        <h2 class="section-title">Skills &amp; <span class="text-gradient">Technologies</span></h2>
+        <p class="section-sub">Languages, frameworks, databases and tools I use to bring ideas to life.</p>
+      </div>
+
+      <div class="skills-tabs" data-aos="fade-up">
+        <button class="skills-tab active" data-tab="languages">Languages</button>
+        <button class="skills-tab" data-tab="frameworks">Frameworks</button>
+        <button class="skills-tab" data-tab="databases">Databases</button>
+        <button class="skills-tab" data-tab="tools">Tools</button>
+      </div>
+
+      <div class="skills-panels">
+        <div class="skills-grid" id="panel-languages" data-panel="languages">
+          <div class="skill-card"><i class="fa-brands fa-python"></i><span>Python</span></div>
+          <div class="skill-card"><i class="fa-brands fa-java"></i><span>Java</span></div>
+          <div class="skill-card"><i class="fa-solid fa-c"></i><span>C</span></div>
+          <div class="skill-card"><i class="fa-solid fa-c-plus-plus"></i><span>C++</span></div>
+          <div class="skill-card"><i class="fa-brands fa-square-js"></i><span>JavaScript</span></div>
+          <div class="skill-card"><i class="fa-solid fa-file-code"></i><span>TypeScript</span></div>
+          <div class="skill-card"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+          <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+          <div class="skill-card"><i class="fa-brands fa-php"></i><span>PHP</span></div>
+          <div class="skill-card"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+        </div>
+
+        <div class="skills-grid" id="panel-frameworks" data-panel="frameworks" hidden>
+          <div class="skill-card"><i class="fa-brands fa-react"></i><span>React</span></div>
+          <div class="skill-card"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+          <div class="skill-card"><i class="fa-solid fa-mobile-screen-button"></i><span>Flutter</span></div>
+        </div>
+
+        <div class="skills-grid" id="panel-databases" data-panel="databases" hidden>
+          <div class="skill-card"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
+          <div class="skill-card"><i class="fa-solid fa-elephant"></i><span>PostgreSQL</span></div>
+          <div class="skill-card"><i class="fa-solid fa-layer-group"></i><span>SQLite</span></div>
+        </div>
+
+        <div class="skills-grid" id="panel-tools" data-panel="tools" hidden>
+          <div class="skill-card"><i class="fa-solid fa-code"></i><span>VS Code</span></div>
+          <div class="skill-card"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+          <div class="skill-card"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+          <div class="skill-card"><i class="fa-brands fa-android"></i><span>Android Studio</span></div>
+          <div class="skill-card"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+          <div class="skill-card"><i class="fa-solid fa-book"></i><span>Jupyter</span></div>
+          <div class="skill-card"><i class="fa-solid fa-paper-plane"></i><span>Postman</span></div>
+          <div class="skill-card"><i class="fa-solid fa-file-word"></i><span>MS Office</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="projects">
+      <div class="section-head" data-aos="fade-up">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Featured Work</p>
+        <h2 class="section-title">Things I've <span class="text-gradient">Built</span></h2>
+        <p class="section-sub">A selection of projects where I turned an idea into a working product.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card tilt-card" data-aos="fade-up">
+          <div class="project-card-inner">
+            <div class="project-image-wrap">
+              <img src="assets/images/project-finance-tracker.jpg" alt="Finance Tracker application screenshot" class="project-image" loading="lazy" />
+              <div class="project-image-overlay">
+                <a href="https://github.com/vivekyadavlucknow3123-source" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-cursor="hover">
+                  <i class="fa-brands fa-github"></i> View Code
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-number">01</span>
+              <h3 class="project-title">Finance Tracker</h3>
+              <p class="project-desc">
+                A full stack finance tracking application to manage income, expenses and
+                visualize financial analytics with real-time charts and budget insights.
+              </p>
+              <ul class="project-tech">
+                <li>React</li><li>Node.js</li><li>MySQL</li><li>Express</li>
+              </ul>
+              <a href="https://github.com/vivekyadavlucknow3123-source" target="_blank" rel="noopener" class="project-link" data-cursor="hover">
+                View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card tilt-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="project-card-inner">
+            <div class="project-image-wrap">
+              <img src="assets/images/project-workerconnect.jpg" alt="WorkerConnect application screenshot" class="project-image" loading="lazy" />
+              <div class="project-image-overlay">
+                <a href="https://github.com/vivekyadavlucknow3123-source" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-cursor="hover">
+                  <i class="fa-brands fa-github"></i> View Code
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-number">02</span>
+              <h3 class="project-title">WorkerConnect</h3>
+              <p class="project-desc">
+                A platform that connects workers with employers. Includes authentication,
+                real-time chat, and job management for a seamless hiring experience.
+              </p>
+              <ul class="project-tech">
+                <li>Flutter</li><li>Node.js</li><li>MySQL</li><li>Socket.io</li>
+              </ul>
+              <a href="https://github.com/vivekyadavlucknow3123-source" target="_blank" rel="noopener" class="project-link" data-cursor="hover">
+                View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATES ===================== -->
+    <section id="certificates" class="certificates">
+      <div class="section-head" data-aos="fade-up">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Recognition</p>
+        <h2 class="section-title">Certificates &amp; <span class="text-gradient">Achievements</span></h2>
+      </div>
+
+      <div class="cert-timeline">
+        <div class="cert-timeline-line"></div>
+
+        <div class="cert-empty-state" data-aos="fade-up">
+          <div class="cert-empty-card glass-card">
+            <i class="fa-solid fa-certificate"></i>
+            <h3>More certifications coming soon.</h3>
+            <p>I'm currently working on a few certifications — this timeline will fill up soon.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="contact">
+      <div class="section-head" data-aos="fade-up">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Get In Touch</p>
+        <h2 class="section-title">Let's Build Something <span class="text-gradient">Great</span></h2>
+        <p class="section-sub">Have a project in mind or just want to say hi? My inbox is always open.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-col" data-aos="fade-right">
+          <div class="contact-info-item glass-card">
+            <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <p class="contact-info-label">Email</p>
+              <a href="mailto:vivekyadavrg@gmail.com" class="contact-info-value">vivekyadavrg@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-info-item glass-card">
+            <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <p class="contact-info-label">Location</p>
+              <span class="contact-info-value">Lucknow, India</span>
+            </div>
+          </div>
+          <div class="contact-info-item glass-card">
+            <div class="contact-info-icon"><i class="fa-brands fa-github"></i></div>
+            <div>
+              <p class="contact-info-label">GitHub</p>
+              <a href="https://github.com/vivekyadavlucknow3123-source" target="_blank" rel="noopener" class="contact-info-value">/vivekyadavlucknow3123-source</a>
+            </div>
+          </div>
+          <div class="contact-info-item glass-card">
+            <div class="contact-info-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div>
+              <p class="contact-info-label">LinkedIn</p>
+              <a href="https://www.linkedin.com/in/vivek-yadav99/" target="_blank" rel="noopener" class="contact-info-value">/in/vivek-yadav99</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card" id="contactForm" data-aos="fade-left" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required minlength="2" maxlength="100" />
+              <span class="form-error" id="error-name"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              <span class="form-error" id="error-email"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" required minlength="3" maxlength="150" />
+            <span class="form-error" id="error-subject"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required minlength="10" maxlength="2000"></textarea>
+            <span class="form-error" id="error-message"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit magnetic" data-cursor="hover">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-spinner" hidden></span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo">VY<span class="nav-logo-dot">.</span></a>
+        <p>Designed &amp; Developed By <strong>Vivek Yadav</strong></p>
+      </div>
+
+      <nav class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer-socials">
+        <a href="https://github.com/vivekyadavlucknow3123-source" target="_blank" rel="noopener" data-cursor="hover" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/vivek-yadav99/" target="_blank" rel="noopener" data-cursor="hover" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:vivekyadavrg@gmail.com" data-cursor="hover" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> Vivek Yadav. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" data-cursor="hover">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+  <script src="js/cursor.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

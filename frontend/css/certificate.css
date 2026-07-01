@@ -1,0 +1,96 @@
+/* =========================================================
+   CERTIFICATE.CSS
+========================================================= */
+
+.cert-timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cert-timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--color-border-strong), transparent);
+  transform: translateX(-50%);
+}
+
+.cert-item {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.cert-empty-state {
+  display: flex;
+  justify-content: center;
+}
+
+.cert-empty-card {
+  padding: 56px 40px;
+  text-align: center;
+  max-width: 460px;
+}
+
+.cert-empty-card i {
+  font-size: 2.6rem;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.cert-empty-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.cert-empty-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* Reference styles for future certificate cards */
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.cert-card-icon {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.cert-card-title {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.cert-card-org {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.cert-card-date {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
